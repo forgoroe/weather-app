@@ -20,9 +20,7 @@ if(checkAvailability()){
         if (xhr.readyState == XMLHttpRequest.DONE) {
             if (xhr.status == 200) {
                 data = JSON.parse(xhr.responseText);
-                console.log(xhr.responseText);
                 displayInfo(data);
-
             } else if (xhr.status == 400) {
                 alert('There was an error 400');
             } else {
@@ -45,6 +43,27 @@ if(checkAvailability()){
   alert('Geolocation not available');
 }
 
+//convert Celsius to Fahrenheit
+document.querySelector('p[title]').onclick = function(){
+  var currentTemperature = 0;
+  var newTemperature = 0;
+  var currentStandard = document.getElementById('CorF').innerText;
+  currentTemperature = document.getElementById('temp').innerText;
+
+  if(currentStandard == '°C'){
+    //convert to F
+    newTemperature = currentTemperature*9/5+32;
+    document.getElementById('temp').innerHTML = newTemperature.toFixed(2);
+    document.getElementById('CorF').innerHTML = '&#8457';
+  } else{
+    //convert to C
+    newTemperature = (currentTemperature-32)*5/9;
+    document.getElementById('temp').innerHTML = newTemperature.toFixed(2);
+    document.getElementById('CorF').innerHTML = '&deg;C';
+  }
+
+};
+
 function displayInfo(data){
   var cityNode = document.getElementById('cityName');
   var weatherNode = document.getElementById('weather');
@@ -57,6 +76,23 @@ function displayInfo(data){
   cityNode.appendChild(cityText);
   weatherNode.appendChild(weatherText);
   temperatureNode.appendChild(temperatureText);
+
+  var weatherCode = data.weather[0].id;
+  var currentWeatherImage = document.getElementById('weatherImage');
+
+  if (weatherCode < 300){
+    currentWeatherImage.src = 'http://res.cloudinary.com/forgoroe/image/upload/v1476551911/weather%20svg/sw-27.svg';
+  } else if(weatherCode < 400){
+    currentWeatherImage.src = 'http://res.cloudinary.com/forgoroe/image/upload/v1476551912/weather%20svg/sw-12.svg';
+  } else if(weatherCode < 600){
+    currentWeatherImage.src = 'http://res.cloudinary.com/forgoroe/image/upload/v1476551910/weather%20svg/sw-22.svg';
+  } else if(weatherCode < 700){
+    currentWeatherImage.src = 'http://res.cloudinary.com/forgoroe/image/upload/v1476551910/weather%20svg/sw-24.svg';
+  } else if(weatherCode == 800){
+    currentWeatherImage.src = 'http://res.cloudinary.com/forgoroe/image/upload/v1476551909/weather%20svg/sw-01.svg';
+  } else if(weatherCode < 900){
+    currentWeatherImage.src = 'http://res.cloudinary.com/forgoroe/image/upload/v1476551911/weather%20svg/sw-06.svg';
+  }
 }
 
 function checkAvailability(){
@@ -66,5 +102,4 @@ function checkAvailability(){
     return false;
   }
 }
-
 }

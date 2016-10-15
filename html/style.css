@@ -1,3 +1,20 @@
-#temp{
-  cursor: pointer;
+h1{
+  font-family: 'Philosopher', sans-serif;
+}
+
+body{
+  font-family: 'Muli', sans-serif;
+  text-align: center;
+
+}
+
+p[title="Click to convert to imperial/metric"]{
+  cursor: pointer;  
+}
+
+.col-lg-12{
+
+}
+#weatherImage{
+  width: 15%;
 }
