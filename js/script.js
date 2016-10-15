@@ -81,16 +81,23 @@ function displayInfo(data){
   var currentWeatherImage = document.getElementById('weatherImage');
 
   if (weatherCode < 300){
+    //thunderstorm
     currentWeatherImage.src = 'http://res.cloudinary.com/forgoroe/image/upload/v1476551911/weather%20svg/sw-27.svg';
   } else if(weatherCode < 400){
+    //drizzle
     currentWeatherImage.src = 'http://res.cloudinary.com/forgoroe/image/upload/v1476551912/weather%20svg/sw-12.svg';
   } else if(weatherCode < 600){
+    //rain
     currentWeatherImage.src = 'http://res.cloudinary.com/forgoroe/image/upload/v1476551910/weather%20svg/sw-22.svg';
   } else if(weatherCode < 700){
+    //snow
     currentWeatherImage.src = 'http://res.cloudinary.com/forgoroe/image/upload/v1476551910/weather%20svg/sw-24.svg';
   } else if(weatherCode == 800){
+    //clear
+    document.body.style.background = 'url(http://res.cloudinary.com/forgoroe/image/upload/c_scale,w_1920/v1476561810/backgrounds/gcIAxqB.jpg)';
     currentWeatherImage.src = 'http://res.cloudinary.com/forgoroe/image/upload/v1476551909/weather%20svg/sw-01.svg';
   } else if(weatherCode < 900){
+    //clouds
     currentWeatherImage.src = 'http://res.cloudinary.com/forgoroe/image/upload/v1476551911/weather%20svg/sw-06.svg';
   }
 }
