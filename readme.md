@@ -4,7 +4,7 @@ Simple weather app that displays the current position, weather conditions and te
 
 I've tried not using jQuery at all, focusing more on pure javascript.
 
-![Preview](http://res.cloudinary.com/forgoroe/image/upload/v1476567006/previews/weatherAppPreview.png)
+[Preview](http://res.cloudinary.com/forgoroe/image/upload/v1476567006/previews/weatherAppPreview.png)
 
 ##Known issues
 
