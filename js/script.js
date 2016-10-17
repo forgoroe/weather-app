@@ -78,8 +78,8 @@ window.onload = function() {
         cityNode.appendChild(cityText);
         weatherNode.appendChild(weatherText);
         temperatureNode.appendChild(temperatureText);
-        //
-        var weatherCode = 201;
+        
+        var weatherCode = data.weather.id;
         var currentWeatherImage = document.getElementById('weatherImage');
 
         if (weatherCode < 300) {
