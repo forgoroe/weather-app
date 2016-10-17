@@ -76,7 +76,7 @@ function displayInfo(data){
   cityNode.appendChild(cityText);
   weatherNode.appendChild(weatherText);
   temperatureNode.appendChild(temperatureText);
-
+//
   var weatherCode = data.weather[0].id;
   var currentWeatherImage = document.getElementById('weatherImage');
 
@@ -88,9 +88,11 @@ function displayInfo(data){
     currentWeatherImage.src = 'http://res.cloudinary.com/forgoroe/image/upload/v1476551912/weather%20svg/sw-12.svg';
   } else if(weatherCode < 600){
     //rain
+    document.body.style.background = 'url(http://res.cloudinary.com/forgoroe/image/upload/c_scale,w_1920/v1476727254/backgrounds/rain-winter-painting-stream-forest-nature-mountain.jpg)';
     currentWeatherImage.src = 'http://res.cloudinary.com/forgoroe/image/upload/v1476551910/weather%20svg/sw-22.svg';
   } else if(weatherCode < 700){
     //snow
+    document.body.style.background = 'url(http://res.cloudinary.com/forgoroe/image/upload/c_scale,w_1920/v1476727249/backgrounds/jro-footsteps-in-the-snow-r1.jpg)';
     currentWeatherImage.src = 'http://res.cloudinary.com/forgoroe/image/upload/v1476551910/weather%20svg/sw-24.svg';
   } else if(weatherCode == 800){
     //clear
@@ -98,6 +100,7 @@ function displayInfo(data){
     currentWeatherImage.src = 'http://res.cloudinary.com/forgoroe/image/upload/v1476551909/weather%20svg/sw-01.svg';
   } else if(weatherCode < 900){
     //clouds
+    document.body.style.background = 'url(http://res.cloudinary.com/forgoroe/image/upload/c_scale,w_1920/v1476727287/backgrounds/cloudy-sky_181908-1600x1200.jpg)';
     currentWeatherImage.src = 'http://res.cloudinary.com/forgoroe/image/upload/v1476551911/weather%20svg/sw-06.svg';
   }
 }

@@ -1,5 +1,7 @@
 h1{
   font-family: 'Philosopher', sans-serif;
+  color: #333	;
+  background-color: #D3D3D3;
 }
 
 body{
@@ -8,13 +10,22 @@ body{
 
 }
 
+.container{
+  overflow:auto;
+  border-radius: 2px;
+  background-color: black;
+  opacity: 0.8;
+}
+
+#weatherInfo{
+  color: ivory;
+}
+
 p[title="Click to convert to imperial/metric"]{
-  cursor: pointer;  
+  cursor: pointer;
 }
 
-.col-lg-12{
-
-}
 #weatherImage{
-  width: 15%;
+  background-size: 100% cover;
+  width: 100px;
 }
