@@ -79,7 +79,7 @@ window.onload = function() {
         weatherNode.appendChild(weatherText);
         temperatureNode.appendChild(temperatureText);
         
-        var weatherCode = data.weather.id;
+        var weatherCode = data.weather[0].id;
         var currentWeatherImage = document.getElementById('weatherImage');
 
         if (weatherCode < 300) {
