@@ -14,7 +14,7 @@ Previous issues [#1](https://github.com/forgoroe/weather-app/issues/1) and [#2](
 
 Weather-app now makes use of the Google API to retrieve the coordinates, making it possible to use this small "widget" on either Chrome or Firefox, *weather* :wink: you locally host the page or not.
 
-[Github html preview](http://htmlpreview.github.io/?https://github.com/forgoroe/weather-app/blob/master/html/index.html) or [codepen](http://codepen.io/Forgoroe/full/mAzxwA/) should now both work for you.
+[Github pages](https://forgoroe.github.io/weather-app/) or [codepen](http://codepen.io/Forgoroe/full/mAzxwA/) should now both work for you.
 
 ##Motivation
 
