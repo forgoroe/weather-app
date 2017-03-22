@@ -1,4 +1,4 @@
-#Weather app
+# Weather app
 
 Simple weather app that displays the current position, weather conditions and temperature (which can be viewed in Fahrenheit or Celsius).
 
@@ -6,7 +6,7 @@ I've tried not using jQuery at all, focusing more on pure javascript.
 
 ![Preview](http://res.cloudinary.com/forgoroe/image/upload/v1476567006/previews/weatherAppPreview.png)
 
-##Known issues
+## Known issues
 
 ... Have been fixed :smiley:
 
@@ -16,11 +16,11 @@ Weather-app now makes use of the Google API to retrieve the coordinates, making 
 
 [Codepen](http://codepen.io/Forgoroe/full/mAzxwA/) should now work for you.
 
-##Motivation
+## Motivation
 
 This project was made by following the [FreeCodeCamp](https://www.freecodecamp.com/) user stories for the [weather app challenge](https://www.freecodecamp.com/challenges/show-the-local-weather).
 
-##Resources and APIs
+## Resources and APIs
 
 - [Bootstrap](http://getbootstrap.com/)
 
